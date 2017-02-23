@@ -2,16 +2,23 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Pangolin|Roboto');
 
+header {
+    position: fixed;
+    width: 100%;
+    background: grey;
+}
+
 body {
     background: #6303fc;
     font-family: 'Roboto', sans-serif;
-    font-family: 'Pangolin', cursive;
+
 }
 
 /* Typography */
 
 h1,h2,h3,h4,h6 {
     font-family: 'Roboto', sans-serif;
+    font-family: 'Pangolin', cursive;
 }
 
 h1 {
