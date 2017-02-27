@@ -9,11 +9,11 @@ header {
     padding: 20px;
     top: 0;
     left: 0;
-    background: grey;
+    background: #868686;
 }
 
 body {
-    background: #6303fc;
+    background: #6effc7;
     font-family: 'Roboto', sans-serif;
     margin-top: 12em;
 }
@@ -28,7 +28,62 @@ h1,h2,h3,h4,h6 {
 
 h1 {
     font-size: 4em;
+    color: #a8ffdd;
 }
 h2 {
     font-size: 2em;
 }
+
+
+/* Layout */
+.page-wrapper {
+    background: #baffe4;
+    margin: 0 auto;
+    width: 96%;
+}
+
+#zen-intro {
+    background: #d6ffef;
+}
+#zen-supporting {
+    background: #3fffb5;
+}
+
+.sidebar {
+    background: #00ff9d;
+}
+
+/* Media Queries */
+/* Mobile: 320px = 20em */
+@media screen and (min-width: 20em) { 
+
+  /* Diagnostic Styling. Delete When Done. */
+  body:before {
+       background: yellow;
+       content: "Mobile Size";
+  }
+/* END MOBILE */
+}
+
+/* Tablet:  768px = 160em */
+@media screen and (min-width: 48em)  {
+
+  /* Diagnostic Styling. Delete When Done. */
+  body:before {
+       background: yellow;
+       content: "Tablet Size";
+  }
+/* END TABLET */
+}
+
+/* Desktop: 1280px = 80em */
+@media screen and (min-width: 80em) { 
+  
+  /* Diagnostic Styling. Delete When Done. */
+  body:before {
+       background: yellow;
+       content: "Desktop Size";
+  }
+/* END DESKTOP */
+}
+
