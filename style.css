@@ -63,8 +63,14 @@ h1,h2,h3,h4,h6 {
     color: #e5ffc2;
     width: 9em;
     padding: 6px 0 0 12px;
+    transition: 
+        color 3s,
+        text-shadow 3s;
+}
+.intro h1:hover {
+    color: #00ff64;
     text-shadow: 0px 0px 50px green;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(253, 255, 0);
 }
 .intro h2 {
     font-family: 'Oxygen', sans-serif;
@@ -154,8 +160,9 @@ h1,h2,h3,h4,h6 {
 #zen-preamble {
     background: #425754;
     display: inline-flex;
-    position: inherit;
+    position: static;
     margin-left: 45px;
+    width: 100%;
     box-shadow: 0px 6px 30px -10px #425754;
 }
 .preamble h3 {
@@ -164,7 +171,7 @@ h1,h2,h3,h4,h6 {
     transition: 4s;
     padding: 20px;
     text-align: center;
-    transform: translateX(-5vmin);
+    margin: 0px 50px 0px -45px;
     border-radius: 25%/50%;
     box-shadow: 0px 6px 30px -10px #425754;
 }
@@ -174,32 +181,34 @@ h1,h2,h3,h4,h6 {
 }
 .preamble p {
     color: antiquewhite;
-    left: -40px;
+    left: -35px;
     position: relative;
 }
 
 
 /* SUPPORTING INFO */
 #zen-supporting {
-    display: flex;
+    display: block;
+    width: 100%;
 }
 /* Second Info Block */
 #zen-explanation {
-    margin: 70px 50px 0px 0px;
-    position: inherit;
+    margin: 50px 50px 55px 60px;
     background: #425754;
-    display: block;
+    display: inline-flex;
+    width: 100%;
+    height: 12vmin;
     box-shadow: 0px 6px 30px -10px #425754;
 }
 .explanation h3 {
-    font-size: 2.5vmin;
     background: #FF8C00;
     color: antiquewhite;
     transition: 4s;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
-    transform: translateY(-5vmin);
-    border-radius: 35%;
+    margin: 0px 50px 0px -45px;
+    border-radius: 25%/50%;
+    width: 59vmin;
     box-shadow: 0px 6px 30px -10px #425754;
 }
 .explanation h3:hover {
@@ -208,7 +217,7 @@ h1,h2,h3,h4,h6 {
 }
 .explanation p {
     color: antiquewhite;
-    top: -45px;
+    left: -35px;
     position: relative;
 }
 
