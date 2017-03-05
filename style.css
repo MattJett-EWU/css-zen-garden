@@ -2,34 +2,60 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 
 * {
     box-sizing: border-box;
 }
-
 header {
     position: fixed;
     left: 0px;
     top: 0px;
     right: 0px;
-    border-radius: 0px;
-    background-color: rgba(0, 12, 2, 0.25);
+    width: 100%;
+    background-color: rgba(0, 12, 2, 0.30);
 }
-
 body {
-    background: #6effc7;
+    background: #A0FF80;
     font-family: 'Roboto', sans-serif;
     margin-top: 12em;
 }
 
-/* Typography */
+/* PAGE LAYOUT */
+.page-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
 
+
+#zen-participation {
+    background: green;
+    display: flex;
+}
+#zen-benefits {
+    background: white;
+    display: flex;
+}
+#zen-requirments {
+    background: purple;
+    display: flex;
+}
+.sidebar {
+    background: #00ebff;
+}
+.extral {
+    background: yellow;
+}
+
+
+/* SUMMMARY */
+/* Headers */
+/* Typography */
 h1,h2,h3,h4,h6 {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
-
-h1 {
+.intro h1 {
     font-family: 'Nothing You Could Do', cursive;
     text-align: left;
     font-size: 2em;
@@ -40,124 +66,314 @@ h1 {
     text-shadow: 0px 0px 50px green;
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
-h2 {
+.intro h2 {
     font-family: 'Oxygen', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
-    text-decoration: overline;
+    border-top: solid 1.5px antiquewhite;
     position: relative;
-    color: darkslategrey;
+    color: antiquewhite;
 }
 
-/* Layout */
-.page-wrapper {
-    background: #baffe4;
-    margin: 0 auto;
-    width: 96%;
+/* Paragraph */
+/* Move summary text up top below header */
+.summary p:first-child {
+    color: antiquewhite;
+    display: inline-flex;
+    justify-content: center;
+    height: 2vmin;
+    font-size: 1.3vmin;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 0.2vmin;
+    margin-top: 13px;
+    background-color: rgba(0, 12, 2, 0.40);
 }
-#zen-intro {
-    background: #d6ffef;
+/* Add arrows around lower header band text */
+.summary p:first-child:before {
+    content: '🔼';
+    margin-top: -4px;
 }
+.summary p:first-child:after {
+    content: '🔼';
+    margin-top: -4px;
+}
+.summary p:last-child {
+    line-height: 0;
+    top: 0;
+    margin-top: 0;
+}
+
+/* Anchors */
+/* Whole text edit */
+.summary a {
+    /*upper case, special font, spacing around circle*/
+    margin: 0 4px 0 4px; /*spacing circles to text*/
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+}
+/* First Frame */
+.summary a:link,
+.summary a:visited {
+    /*Make circle*/
+    display: inline-block;
+    transform: translateY(-40%);
+    border-radius: 50%;
+    /*adjusts size of buttons*/
+    font-size: 11px;
+    width: 4em;
+    height: 4em;
+    /*color formatting of circle*/
+    background: #FF8C00;
+    color: antiquewhite;
+    transition: 
+        background 2s,
+        border-radius 2s,
+        color 2s;
+    /*typo formatting in circle*/
+    text-align: center;
+    vertical-align: text-top;
+    text-decoration: none;
+    line-height: 1em;
+    padding-top: 11px;
+}
+/* Last Frame */
+.summary a:hover {
+    /*Make square, pink, and black text*/
+    background: rgb(255, 0, 88);
+    border-radius: 10%;
+    color: darkslategray;   
+} 
+
+
+/* PREAMBLE */
+/* First Info Block */
+#zen-preamble {
+    background: #425754;
+    display: inline-flex;
+    position: inherit;
+    margin-left: 45px;
+    box-shadow: 0px 6px 30px -10px #425754;
+}
+.preamble h3 {
+    background: #FF8C00;
+    color: antiquewhite;
+    transition: 4s;
+    padding: 20px;
+    text-align: center;
+    transform: translateX(-5vmin);
+    border-radius: 25%/50%;
+    box-shadow: 0px 6px 30px -10px #425754;
+}
+.preamble h3:hover {
+    background: #FF0058;
+    color: darkslategray;
+}
+.preamble p {
+    color: antiquewhite;
+    left: -40px;
+    position: relative;
+}
+
+
+/* SUPPORTING INFO */
 #zen-supporting {
-    background: #3fffb5;
+    display: flex;
 }
-.sidebar {
-    background: #00ff9d;
+/* Second Info Block */
+#zen-explanation {
+    margin: 70px 50px 0px 0px;
+    position: inherit;
+    background: #425754;
+    display: block;
+    box-shadow: 0px 6px 30px -10px #425754;
 }
-
-
+.explanation h3 {
+    font-size: 2.5vmin;
+    background: #FF8C00;
+    color: antiquewhite;
+    transition: 4s;
+    padding: 30px;
+    text-align: center;
+    transform: translateY(-5vmin);
+    border-radius: 35%;
+    box-shadow: 0px 6px 30px -10px #425754;
+}
+.explanation h3:hover {
+    background: #FF0058;
+    color: darkslategray;
+}
+.explanation p {
+    color: antiquewhite;
+    top: -45px;
+    position: relative;
+}
 
 
 
 /* Media Queries */
     /* Mobile: 320px = 20em */
     @media screen and (min-width: 20em) { 
-
-        /* Diagnostic Styling. Delete When Done. */
-        body:before {
-            background: yellow;
-            content: "Mobile Size";
-        }
+                /* Diagnostic Styling. Delete When Done. */
+                body:before {
+                background: yellow;
+                content: "Mobile Size";}
         
-        h1 {
+        .intro h1 {
             font-size: 1.5em;
         }
-        h2 {
+        .intro h2 {
             font-size: 10px;
             width: 190px;
-            padding: 0 0 8px 0;
-            margin-left: 10px;
+            padding: 0 0 7px 0;
+            margin-left: 13px;
             text-align: left;
             letter-spacing: 1.9px;
             word-spacing: 3px;
         }
         
         /* Faux-Positioning */
+        .summary p:first-child {
+            top: 4.9%;
+        }
+        /* Faux-Positioning */
         .summary p:last-child {
             position: fixed;
-            top: 10px;
             right: 10px;
-            font-size: 12px;
-        }
+            font-size: 1.5vmin;
+            color: antiquewhite;
+            text-transform: uppercase;
+            letter-spacing: 0.1vmin;
+            height: 58px;
+            line-height: 60px;
+        } 
         
-        /* First Frame */
-        #zen-summary a:link,
-        #zen-summary a:visited {
-            background: #404646;
-            color: white;
-            display: inline-flex;
-            width: 3.5em;
-            height: 3.5em;
-            text-align: center;
-            position: relative;
-            top: -14px;
-            text-decoration: none;
-            line-height: 20px;
+        .preamble {
             
-            transition: 
-                background .8s,
-                border-radius .2s .2s;
         }
-        /* Last Frame */
-        #zen-summary a:hover {
-            background: rgb(255, 0, 88);
-            border-radius: 10px;
-            color: black;
-        }
-        
-        
         /* END MOBILE */
     }
 
     /* Tablet:  768px = 160em */
     @media screen and (min-width: 48em)  {
-
-        /* Diagnostic Styling. Delete When Done. */
-        body:before {
-            background: yellow;
-            content: "Tablet Size";
+                /* Diagnostic Styling. Delete When Done. */
+                body:before {
+                background: yellow;
+                content: "Tablet Size";}
+        
+        .intro h1 {
+            position: static;
+            font-size: 3em;
+            height: 1.25em;
+        }
+        .intro h2 {
+            font-size: 17.5px;
+            width: 378px;
+            padding: 0 0 7px 0;
+            margin-left: 12px;
+            text-align: left;
+            letter-spacing: 5.4px;
+            word-spacing: 5px;
         }
         
-        h1 {
-            font-size: 3em;
-            top: 20px
+        .summary p:first-child {
+            top: 8.4%;
+            color: rgba(100%, 100%, 100%, 0.8);
+        }
+        .summary p:last-child {
+            line-height: 95px;
+            padding-top: 0;
+        }
+        .summary p:first-child:before {
+            font-size: 16px;
+        }
+        .summary p:first-child:after {
+            font-size: 16px;
+        }
+        .summary a:link,
+        .summary a:visited {
+            transform: translateY(-33%)
         }
         /* END TABLET */
     }
 
     /* Desktop: 1280px = 80em */
     @media screen and (min-width: 80em) { 
-
-        /* Diagnostic Styling. Delete When Done. */
-        body:before {
-            background: yellow;
-            content: "Desktop Size";
+                /* Diagnostic Styling. Delete When Done. */
+                body:before {
+                background: yellow;
+                content: "Desktop Size";}
+        
+        .intro header {
+            bottom: 782px;
         }
         
-        h1 {
+        .intro h1 {
             font-size: 6em;
             width: 100%;
             text-align: center;
+            
+        }
+        .intro h2 {
+            width: 100%;
+            top: -10px;
+            padding: 0 0 4px 0px;
+            text-align: center;
+            display: block;
+            letter-spacing: 6.5px;
+            word-spacing: 4px;
+            transform: scaleX(1.92);
+        }
+        
+        .summary p:first-child {
+            top: 14.6%;
+            padding-top: 2.5px;
+            margin-top: 0px;
+            color: rgba(100%, 100%, 100%, 0.6);
+        }
+        .summary p:last-child {
+            top: 58px;
+            line-height: 60px;
+            font-size: 1vmin;
+            right: -24px;
+            transform: scale(0.8);
+        }
+        .summary p:first-child:before {
+            font-size: 16px;
+        }
+        .summary p:first-child:after {
+            font-size: 16px;
+        }
+        .summary a:link,
+        .summary a:visited {
+            transform: translateY(-40%)
+        }
+        
+        .preamble {
+            font-size: 2vmin;
+        }
+        .preamble h3 {
+            vertical-align: middle;
+        }
+        .preamble p {
+            margin: 0.3em;
+            padding: 0.4em;
+            font-size: 1.7vmin;
+        }
+        
+        .explanation {
+            font-size: 2vmin;
+        }
+        .explanation h3 {
+            vertical-align: middle;
+        }
+        .explanation p {
+            margin: 0.3em;
+            padding: 0.7em;
+            font-size: 1.7vmin;
         }
         /* END DESKTOP */
     }
