@@ -13,6 +13,7 @@ header {
     top: 0px;
     right: 0px;
     width: 100%;
+    height: 16%;
     background-color: rgba(0, 12, 2, 0.30);
 }
 body {
@@ -59,7 +60,6 @@ h1,h2,h3,h4,h6 {
     font-family: 'Nothing You Could Do', cursive;
     text-align: left;
     font-size: 2em;
-    position: relative;
     color: #e5ffc2;
     width: 9em;
     padding: 6px 0 0 12px;
@@ -84,18 +84,16 @@ h1,h2,h3,h4,h6 {
 /* Paragraph */
 /* Move summary text up top below header */
 .summary p:first-child {
-    color: antiquewhite;
-    display: inline-flex;
-    justify-content: center;
-    height: 2vmin;
-    font-size: 1.3vmin;
     position: fixed;
-    left: 0px;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 2vmin;
     width: 100%;
-    text-align: center;
+    left: 0px;
+    font-size: 1.3vmin;
     text-transform: uppercase;
-    padding-top: 0.2vmin;
-    margin-top: 13px;
     background-color: rgba(0, 12, 2, 0.40);
 }
 /* Add arrows around lower header band text */
@@ -193,7 +191,7 @@ h1,h2,h3,h4,h6 {
 }
 /* Second Info Block */
 #zen-explanation {
-    margin: 50px 50px 55px 60px;
+    margin: 50px 50px 55px 45px;
     background: #425754;
     display: inline-flex;
     width: 100%;
@@ -317,17 +315,19 @@ h1,h2,h3,h4,h6 {
                 content: "Desktop Size";}
         
         .intro header {
-            bottom: 782px;
+            bottom: 83.75vmin;
         }
         
         .intro h1 {
             font-size: 6em;
+            float: inherit;
             width: 100%;
             text-align: center;
             
         }
         .intro h2 {
             width: 100%;
+            float: inherit;
             top: -10px;
             padding: 0 0 4px 0px;
             text-align: center;
@@ -338,7 +338,8 @@ h1,h2,h3,h4,h6 {
         }
         
         .summary p:first-child {
-            top: 14.6%;
+            top: 15.7vmin;
+            float: inherit;
             padding-top: 2.5px;
             margin-top: 0px;
             color: rgba(100%, 100%, 100%, 0.6);
