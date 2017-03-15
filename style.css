@@ -17,42 +17,24 @@ header {
     background-color: rgba(0, 12, 2, 0.30);
 }
 body {
-    background: #2f37f5;
+    background: #f79d00; /* fallback for old browsers */
+    background: linear-gradient(to left, #f79d00, #64f38c);
     font-family: 'Roboto', sans-serif;
-    margin-top: 12em;
+    margin-top: 20vmin;
 }
 
 /* PAGE LAYOUT */
 .page-wrapper {
     margin: 0 auto;
     width: 100%;
-}
-
-
-#zen-participation {
-    background: green;
     display: flex;
-}
-#zen-benefits {
-    background: white;
-    display: flex;
-}
-#zen-requirments {
-    background: purple;
-    display: flex;
-}
-.sidebar {
-    background: #00ebff;
-}
-.extral {
-    background: yellow;
 }
 
 
 /* SUMMMARY */
-/* Headers */
+/* Header */
 /* Typography */
-h1,h2,h3,h4,h6 {
+h1,h2 {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
@@ -119,7 +101,7 @@ h1,h2,h3,h4,h6 {
     font-family: 'Audiowide', cursive;
     text-transform: uppercase;
 }
-/* First Frame */
+/* before */
 .summary a:link,
 .summary a:visited {
     /*Make circle*/
@@ -144,79 +126,12 @@ h1,h2,h3,h4,h6 {
     line-height: 1em;
     padding-top: 11px;
 }
-/* Last Frame */
+/* after */
 .summary a:hover {
     /*Make square, pink, and black text*/
     background: rgb(255, 0, 88);
     border-radius: 10%;
     color: darkslategray;   
-} 
-
-
-/* PREAMBLE */
-/* First Info Block */
-#zen-preamble {
-    background: #425754;
-    display: inline-flex;
-    position: static;
-    margin-left: 45px;
-    width: 100%;
-    box-shadow: 0px 6px 30px -10px #425754;
-}
-.preamble h3 {
-    background: #FF8C00;
-    color: antiquewhite;
-    transition: 4s;
-    padding: 20px;
-    text-align: center;
-    margin: 0px 50px 0px -45px;
-    border-radius: 25%/50%;
-    box-shadow: 0px 6px 30px -10px #425754;
-}
-.preamble h3:hover {
-    background: #FF0058;
-    color: darkslategray;
-}
-.preamble p {
-    color: antiquewhite;
-    left: -35px;
-    position: relative;
-}
-
-
-/* SUPPORTING INFO */
-#zen-supporting {
-    display: block;
-    width: 100%;
-}
-/* Second Info Block */
-#zen-explanation {
-    margin: 50px 50px 55px 45px;
-    background: #425754;
-    display: inline-flex;
-    width: 100%;
-    height: 12vmin;
-    box-shadow: 0px 6px 30px -10px #425754;
-}
-.explanation h3 {
-    background: #FF8C00;
-    color: antiquewhite;
-    transition: 4s;
-    padding: 20px;
-    text-align: center;
-    margin: 0px 50px 0px -45px;
-    border-radius: 25%/50%;
-    width: 59vmin;
-    box-shadow: 0px 6px 30px -10px #425754;
-}
-.explanation h3:hover {
-    background: #FF0058;
-    color: darkslategray;
-}
-.explanation p {
-    color: antiquewhite;
-    left: -35px;
-    position: relative;
 }
 
 
@@ -257,10 +172,6 @@ h1,h2,h3,h4,h6 {
             height: 58px;
             line-height: 60px;
         } 
-        
-        .preamble h3{
-                 
-        }
         /* END MOBILE */
     }
 
@@ -384,6 +295,32 @@ h1,h2,h3,h4,h6 {
             margin: 0.3em;
             padding: 0.7em;
             font-size: 1.7vmin;
+        }
+        
+                /* SIDEBAR */
+        .sidebar {
+            /* box creation */
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: block;
+            height: auto;
+            min-width: 10px;
+            width: 30px;
+            background-color: darkslategray;
+            transition-delay: 0.25s;
+            transition-duration: 1s;
+        }
+        .sidebar:hover {
+            animation-play-state: running;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            height: auto;
+            width: 200px;
+            background-color: #FF0058;
         }
         /* END DESKTOP */
     }
