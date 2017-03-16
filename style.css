@@ -13,7 +13,6 @@ header {
     top: 0px;
     right: 0px;
     width: 100%;
-    height: 16%;
     background-color: rgba(0, 12, 2, 0.30);
 }
 body {
@@ -25,8 +24,7 @@ body {
 
 /* PAGE LAYOUT */
 .page-wrapper {
-    margin: 0 auto;
-    width: 100%;
+    width: 101%;
     display: flex;
 }
 
@@ -40,7 +38,6 @@ h1,h2 {
 }
 .intro h1 {
     font-family: 'Nothing You Could Do', cursive;
-    text-align: left;
     font-size: 2em;
     color: #e5ffc2;
     width: 9em;
@@ -59,7 +56,7 @@ h1,h2 {
     font-weight: 100;
     text-transform: uppercase;
     border-top: solid 1.5px antiquewhite;
-    position: relative;
+    margin-top: -10.3px;
     color: antiquewhite;
 }
 
@@ -71,13 +68,13 @@ h1,h2 {
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 2vmin;
     width: 100%;
-    left: 0px;
     font-size: 1.3vmin;
     text-transform: uppercase;
     background-color: rgba(0, 12, 2, 0.40);
+    /* transition */
 }
+
 /* Add arrows around lower header band text */
 .summary p:first-child:before {
     content: '🔼';
@@ -92,7 +89,6 @@ h1,h2 {
     top: 0;
     margin-top: 0;
 }
-
 /* Anchors */
 /* Whole text edit */
 .summary a {
@@ -119,7 +115,7 @@ h1,h2 {
         background 2s,
         border-radius 2s,
         color 2s;
-    /*typo formatting in circle*/
+    /*typog formatting in circle*/
     text-align: center;
     vertical-align: text-top;
     text-decoration: none;
@@ -134,6 +130,25 @@ h1,h2 {
     color: darkslategray;   
 }
 
+
+/* REST OF CONTENT */
+div {
+    flex-wrap: wrap;
+    margin: 2em auto 5em auto;
+}
+/* Road */
+div.preamble {
+    background: antiquewhite;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 0em 2em 0em 2em;
+}
+div[role="main"] {
+    background: antiquewhite;
+    border-radius: 5px;
+    padding: .5em;
+    width: auto;
+}
 
 
 /* Media Queries */
@@ -198,7 +213,7 @@ h1,h2 {
         }
         
         .summary p:first-child {
-            top: 8.4%;
+            top: 14.6vmin;
             color: rgba(100%, 100%, 100%, 0.8);
         }
         .summary p:last-child {
@@ -225,10 +240,6 @@ h1,h2 {
                 background: yellow;
                 content: "Desktop Size";}
         
-        .intro header {
-            bottom: 83.75vmin;
-        }
-        
         .intro h1 {
             font-size: 6em;
             float: inherit;
@@ -238,21 +249,15 @@ h1,h2 {
         }
         .intro h2 {
             width: 100%;
-            float: inherit;
-            top: -10px;
-            padding: 0 0 4px 0px;
             text-align: center;
-            display: block;
             letter-spacing: 6.5px;
             word-spacing: 4px;
             transform: scaleX(1.92);
         }
         
         .summary p:first-child {
-            top: 15.7vmin;
-            float: inherit;
-            padding-top: 2.5px;
-            margin-top: 0px;
+            margin-top: 10px;
+            padding-top: 3px;
             color: rgba(100%, 100%, 100%, 0.6);
         }
         .summary p:last-child {
@@ -270,7 +275,7 @@ h1,h2 {
         }
         .summary a:link,
         .summary a:visited {
-            transform: translateY(-40%)
+            transform: translateY(-40%);
         }
         
         .preamble {
@@ -311,6 +316,9 @@ h1,h2 {
             background-color: darkslategray;
             transition-delay: 0.25s;
             transition-duration: 1s;
+            box-shadow: 
+                4px 0 6px rgba(100,100,100,0.8),
+                8px 0 10px rgba(100,100,100,0.5);
         }
         .sidebar:hover {
             animation-play-state: running;
